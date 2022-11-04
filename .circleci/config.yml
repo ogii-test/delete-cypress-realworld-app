@@ -57,7 +57,7 @@ linux-workflow: &linux-workflow
         executor: with-chrome-and-firefox
         yarn: true
         component: true
-        record: true
+        record: false
         parallel: true
         parallelism: 5
         ci-build-id: ${CIRCLE_SHA1:0:8}
@@ -76,7 +76,7 @@ linux-workflow: &linux-workflow
         wait-on: "http://localhost:3000"
         yarn: true
         start: yarn start:ci
-        record: true
+        record: false
         parallel: true
         parallelism: 5
         ci-build-id: ${CIRCLE_SHA1:0:8}
@@ -96,7 +96,7 @@ linux-workflow: &linux-workflow
         command-prefix: npx percy exec --
         yarn: true
         start: yarn start:ci
-        record: true
+        record: false
         parallel: true
         parallelism: 5
         ci-build-id: ${CIRCLE_SHA1:0:8}
@@ -116,7 +116,7 @@ linux-workflow: &linux-workflow
         wait-on: "http://localhost:3000"
         yarn: true
         start: yarn start:ci
-        record: true
+        record: false
         parallel: true
         parallelism: 5
         ci-build-id: ${CIRCLE_SHA1:0:8}
@@ -135,7 +135,7 @@ linux-workflow: &linux-workflow
         wait-on: "http://localhost:3000"
         yarn: true
         start: yarn start:ci
-        record: true
+        record: false
         parallel: true
         parallelism: 5
         ci-build-id: ${CIRCLE_SHA1:0:8}
@@ -155,7 +155,7 @@ linux-workflow: &linux-workflow
         wait-on: "http://localhost:3000"
         yarn: true
         start: yarn start:ci
-        record: true
+        record: false
         parallel: true
         parallelism: 5
         ci-build-id: ${CIRCLE_SHA1:0:8}
@@ -213,7 +213,7 @@ windows-workflow: &windows-workflow
         wait-on: "http://localhost:3000"
         yarn: true
         start: yarn start:ci
-        record: true
+        record: false
         parallel: true
         parallelism: 5
         ci-build-id: ${CIRCLE_SHA1:0:8}
